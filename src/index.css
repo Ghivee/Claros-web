@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface-bright: 255 255 255;
+  --color-secondary-container: 83 69 106;
+  --color-on-primary-fixed-variant: 66 48 171;
+  --color-alert: 226 72 74;
+  --color-on-surface: 19 19 19;
+  --color-pulse: 175 158 201;
+  --color-primary-container: 142 128 251;
+  --color-primary-fixed-dim: 199 191 255;
+  --color-inverse-surface: 19 19 19;
+  --color-on-primary-fixed: 23 0 101;
+  --color-caution: 239 159 39;
+  --color-primary: 199 191 255;
+  --color-surface-container-high: 241 243 245;
+  --color-outline: 108 117 125;
+  --color-secondary-fixed-dim: 209 191 235;
+  --color-on-error-container: 255 218 214;
+  --color-tertiary-fixed: 134 248 201;
+  --color-surface-container-highest: 233 236 239;
+  --color-outline-variant: 222 226 230;
+  --color-on-primary-container: 36 0 140;
+  --color-on-secondary-container: 198 180 224;
+  --color-surface: 255 255 255;
+  --color-secondary: 209 191 235;
+  --color-surface-variant: 233 236 239;
+  --color-background: 255 255 255;
+  --color-error: 255 180 171;
+  --color-inverse-on-surface: 49 48 48;
+  --color-on-primary: 43 14 149;
+  --color-surface-tint: 199 191 255;
+  --color-primary-fixed: 228 223 255;
+  --color-surface-container-low: 245 245 245;
+  --color-growth: 29 158 117;
+  --color-on-secondary-fixed-variant: 78 64 101;
+  --color-on-secondary-fixed: 33 21 55;
+  --color-on-tertiary-fixed-variant: 0 81 58;
+  --color-on-tertiary: 0 56 39;
+  --color-abyss: 248 249 250;
+  --color-on-surface-variant: 73 80 87;
+  --color-surface-container: 248 249 250;
+  --color-surface-dim: 255 255 255;
+  --color-surface-container-lowest: 255 255 255;
+  --color-secondary-fixed: 236 220 255;
+  --color-on-tertiary-fixed: 0 33 21;
+  --color-tertiary: 104 219 174;
+  --color-tertiary-fixed-dim: 104 219 174;
+  --color-ground: 136 135 128;
+  --color-on-secondary: 55 42 77;
+  --color-error-container: 147 0 10;
+  --color-inverse-primary: 91 75 196;
+  --color-clarity: 19 19 19;
+  --color-on-tertiary-container: 0 49 33;
+  --color-on-background: 19 19 19;
+  --color-tertiary-container: 38 163 122;
+  --color-signal: 124 110 232;
+  --color-on-error: 105 0 5;
+}
+
+.dark {
+  --color-surface-bright: 57 57 57;
+  --color-secondary-container: 83 69 106;
+  --color-on-primary-fixed-variant: 66 48 171;
+  --color-alert: 226 72 74;
+  --color-on-surface: 229 226 225;
+  --color-pulse: 175 158 201;
+  --color-primary-container: 142 128 251;
+  --color-primary-fixed-dim: 199 191 255;
+  --color-inverse-surface: 229 226 225;
+  --color-on-primary-fixed: 23 0 101;
+  --color-caution: 239 159 39;
+  --color-primary: 199 191 255;
+  --color-surface-container-high: 42 42 42;
+  --color-outline: 146 143 159;
+  --color-secondary-fixed-dim: 209 191 235;
+  --color-on-error-container: 255 218 214;
+  --color-tertiary-fixed: 134 248 201;
+  --color-surface-container-highest: 53 53 52;
+  --color-outline-variant: 71 69 83;
+  --color-on-primary-container: 36 0 140;
+  --color-on-secondary-container: 198 180 224;
+  --color-surface: 19 19 19;
+  --color-secondary: 209 191 235;
+  --color-surface-variant: 53 53 52;
+  --color-background: 19 19 19;
+  --color-error: 255 180 171;
+  --color-inverse-on-surface: 49 48 48;
+  --color-on-primary: 43 14 149;
+  --color-surface-tint: 199 191 255;
+  --color-primary-fixed: 228 223 255;
+  --color-surface-container-low: 28 27 27;
+  --color-growth: 29 158 117;
+  --color-on-secondary-fixed-variant: 78 64 101;
+  --color-on-secondary-fixed: 33 21 55;
+  --color-on-tertiary-fixed-variant: 0 81 58;
+  --color-on-tertiary: 0 56 39;
+  --color-abyss: 44 44 42;
+  --color-on-surface-variant: 200 196 213;
+  --color-surface-container: 32 31 31;
+  --color-surface-dim: 19 19 19;
+  --color-surface-container-lowest: 14 14 14;
+  --color-secondary-fixed: 236 220 255;
+  --color-on-tertiary-fixed: 0 33 21;
+  --color-tertiary: 104 219 174;
+  --color-tertiary-fixed-dim: 104 219 174;
+  --color-ground: 136 135 128;
+  --color-on-secondary: 55 42 77;
+  --color-error-container: 147 0 10;
+  --color-inverse-primary: 91 75 196;
+  --color-clarity: 243 241 255;
+  --color-on-tertiary-container: 0 49 33;
+  --color-on-background: 229 226 225;
+  --color-tertiary-container: 38 163 122;
+  --color-signal: 124 110 232;
+  --color-on-error: 105 0 5;
+}
+
+
+@layer base {
+  body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-on-background));
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar for deep dark aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-surface-variant));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-outline-variant));
+}
+
+/* Scatter plot animations */
+@keyframes pulse-danger {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(var(--color-alert) / 0.4);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgb(var(--color-alert) / 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(var(--color-alert) / 0);
+  }
+}
+
+.data-point-alert {
+  animation: pulse-danger 2s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.data-point {
+  animation: float 4s ease-in-out infinite;
+}
+
+.data-point:nth-child(even) {
+  animation-delay: 2s;
+}
+
+/* Custom background patterns */
+.main-container-shadow {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+.dark .main-container-shadow {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.bg-gradient-signal-dark {
+  background: linear-gradient(135deg, #7C6EE8 0%, #4230ab 100%);
+}
+
+.glass-panel {
+  background: rgb(var(--color-surface-container-highest) / 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(var(--color-outline) / 0.1);
+}
+
+.chart-grid {
+  background-image:
+    linear-gradient(to right, rgb(var(--color-outline) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--color-outline) / 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.growth-zone {
+  background: rgb(var(--color-growth) / 0.05);
+  border-left: 4px solid #1D9E75;
+}
