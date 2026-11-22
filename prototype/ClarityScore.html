@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clarity Score - Claros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "secondary-container": "#53456a",
+                        "on-primary-fixed-variant": "#4230ab",
+                        "alert": "#E2484A",
+                        "on-surface": "#e5e2e1",
+                        "pulse": "#AF9EC9",
+                        "primary-container": "#8e80fb",
+                        "primary-fixed-dim": "#c7bfff",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#170065",
+                        "caution": "#EF9F27",
+                        "primary": "#c7bfff",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#928f9f",
+                        "secondary-fixed-dim": "#d1bfeb",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#86f8c9",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#474553",
+                        "on-primary-container": "#24008c",
+                        "on-secondary-container": "#c6b4e0",
+                        "surface": "#131313",
+                        "secondary": "#d1bfeb",
+                        "surface-variant": "#353534",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#2b0e95",
+                        "surface-tint": "#c7bfff",
+                        "primary-fixed": "#e4dfff",
+                        "surface-container-low": "#1c1b1b",
+                        "growth": "#1D9E75",
+                        "on-secondary-fixed-variant": "#4e4065",
+                        "on-secondary-fixed": "#211537",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-tertiary": "#003827",
+                        "abyss": "#2C2C2A",
+                        "on-surface-variant": "#c8c4d5",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#ecdcff",
+                        "on-tertiary-fixed": "#002115",
+                        "tertiary": "#68dbae",
+                        "tertiary-fixed-dim": "#68dbae",
+                        "ground": "#888780",
+                        "on-secondary": "#372a4d",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#5b4bc4",
+                        "clarity": "#F3F1FF",
+                        "on-tertiary-container": "#003121",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#26a37a",
+                        "signal": "#7C6EE8",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "padding-mobile": "24px",
+                        "container-max": "1000px",
+                        "unit-sm": "8px",
+                        "unit-lg": "32px",
+                        "section-gap": "48px",
+                        "unit-xs": "4px",
+                        "gutter": "20px",
+                        "element-gap": "24px",
+                        "unit-md": "16px",
+                        "padding-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-h1": ["Inter"],
+                        "headline-h2": ["Inter"],
+                        "headline-h3": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-h1-mobile": ["Inter"],
+                        "headline-h4": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "code": ["Space Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-h1": ["64px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h2": ["28px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "caption": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-h1-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h4": ["19px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "code": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .main-container {
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+
+        .glass-panel {
+            background: rgba(44, 44, 42, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(146, 143, 159, 0.1);
+        }
+
+        .chart-grid {
+            background-image: 
+                linear-gradient(to right, rgba(146, 143, 159, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(146, 143, 159, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Subtle ambient glow for focus areas */
+        .ambient-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(124, 110, 232, 0.05) 0%, rgba(18, 18, 18, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .growth-zone {
+            background: rgba(29, 158, 117, 0.05);
+            border-left: 4px solid #1D9E75;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(44, 44, 42, 0.5);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(146, 143, 159, 0.3);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(146, 143, 159, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="w-full top-0 sticky bg-surface border-b border-outline-variant z-50">
+<div class="flex justify-between items-center max-w-[1000px] mx-auto px-padding-mobile md:px-padding-desktop h-20">
+<!-- Brand -->
+<div class="flex items-center gap-unit-md">
+<span class="material-symbols-outlined text-signal" data-icon="lens" style="font-variation-settings: 'FILL' 1; font-size: 32px;">lens</span>
+<a class="font-display-h1 text-headline-h2 font-extrabold text-signal tracking-tight" href="#">Claros</a>
+</div>
+<!-- Desktop Nav Links -->
+<div class="hidden md:flex items-center gap-element-gap font-body-md text-body-md">
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">BeliefAudit</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">Origin Map</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">Critical Thinking Gym</a>
+<a class="text-signal font-bold border-b-2 border-signal pb-1 cursor-pointer active:scale-95 transition-transform" href="#">Clarity Score</a>
+</div>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-unit-md">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-pulse transition-colors duration-200">Log In</button>
+<button class="bg-gradient-to-r from-signal to-[#5b4bc4] text-white font-label-sm text-label-sm px-6 py-2 rounded-full cursor-pointer active:scale-95 transition-transform shadow-[0_0_15px_rgba(124,110,232,0.3)]">Start Audit</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex justify-center py-section-gap px-padding-mobile md:px-0">
+<div class="w-full max-w-[1000px] main-container bg-surface rounded-xl flex flex-col gap-section-gap pb-section-gap overflow-hidden relative">
+<!-- Header Section -->
+<header class="px-padding-mobile md:px-padding-desktop pt-padding-desktop flex flex-col md:flex-row justify-between items-end gap-element-gap relative z-10">
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-signal" data-icon="query_stats">query_stats</span>
+<span class="font-label-sm text-label-sm text-pulse uppercase tracking-widest">Sustain Phase</span>
+</div>
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-clarity">Clarity Score</h1>
+<p class="font-body-lg text-body-lg text-ground max-w-2xl mt-unit-sm">Tracking your cognitive independence and bias reduction over time. Own your thought process.</p>
+</div>
+<div class="glass-panel p-unit-md rounded-lg flex items-center gap-unit-md min-w-[200px]">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-ground">Current Score</span>
+<div class="flex items-baseline gap-unit-xs">
+<span class="font-display-h1 text-headline-h2 text-signal">84</span>
+<span class="font-label-sm text-label-sm text-growth flex items-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+                                +12
+                            </span>
+</div>
+</div>
+</div>
+</header>
+<!-- Grid Layout -->
+<div class="px-padding-mobile md:px-padding-desktop grid grid-cols-1 md:grid-cols-12 gap-element-gap relative z-10">
+<!-- Main Chart Area (Spans 8 cols on desktop) -->
+<section class="col-span-1 md:col-span-8 flex flex-col gap-unit-md">
+<div class="flex justify-between items-center">
+<h2 class="font-headline-h3 text-headline-h3 text-on-surface flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-ground" data-icon="show_chart">show_chart</span>
+                            You vs. 30 Days Ago
+                        </h2>
+<!-- Time Toggle -->
+<div class="flex bg-surface-container-highest rounded-full p-1 border border-outline-variant/30">
+<button class="px-4 py-1 rounded-full font-label-sm text-label-sm text-ground hover:text-on-surface transition-colors">7D</button>
+<button class="px-4 py-1 rounded-full font-label-sm text-label-sm text-ground hover:text-on-surface transition-colors">14D</button>
+<button class="px-4 py-1 rounded-full bg-abyss shadow-sm border border-outline-variant/50 font-label-sm text-label-sm text-signal">30D</button>
+</div>
+</div>
+<!-- Chart Container (Placeholder for data viz) -->
+<div class="bg-abyss rounded-xl p-unit-lg border border-outline-variant/30 relative overflow-hidden h-[400px] flex flex-col">
+<!-- Y-Axis Labels -->
+<div class="absolute left-unit-lg top-unit-lg bottom-unit-lg flex flex-col justify-between font-code text-code text-ground z-10">
+<span>100</span>
+<span>80</span>
+<span>60</span>
+<span>40</span>
+<span>20</span>
+</div>
+<!-- Chart Area -->
+<div class="ml-12 flex-grow chart-grid relative w-full h-full flex items-end">
+<!-- Abstract Representation of 30 day line -->
+<svg class="absolute inset-0 w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 100">
+<!-- Grid Lines -->
+<line stroke="rgba(146, 143, 159, 0.1)" stroke-width="0.5" x1="0" x2="100" y1="20" y2="20"></line>
+<line stroke="rgba(146, 143, 159, 0.1)" stroke-width="0.5" x1="0" x2="100" y1="40" y2="40"></line>
+<line stroke="rgba(146, 143, 159, 0.1)" stroke-width="0.5" x1="0" x2="100" y1="60" y2="60"></line>
+<line stroke="rgba(146, 143, 159, 0.1)" stroke-width="0.5" x1="0" x2="100" y1="80" y2="80"></line>
+<!-- Baseline (30 days ago) -->
+<path d="M0,60 Q25,55 50,65 T100,50" fill="none" stroke="rgba(136, 135, 128, 0.4)" stroke-dasharray="4,4" stroke-width="1.5"></path>
+<!-- Current Progress -->
+<path d="M0,60 Q20,40 40,35 T70,20 T100,10" fill="none" filter="drop-shadow(0px 4px 6px rgba(124, 110, 232, 0.4))" stroke="#7C6EE8" stroke-width="3"></path>
+<!-- Area under curve -->
+<path d="M0,60 Q20,40 40,35 T70,20 T100,10 L100,100 L0,100 Z" fill="url(#gradient-signal)" opacity="0.1"></path>
+<!-- Data Points -->
+<circle cx="40" cy="35" fill="#7C6EE8" r="2"></circle>
+<circle cx="70" cy="20" fill="#7C6EE8" r="2"></circle>
+<circle cx="100" cy="10" fill="#F3F1FF" r="3" stroke="#7C6EE8" stroke-width="1.5"></circle>
+<defs>
+<lineargradient id="gradient-signal" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#7C6EE8"></stop>
+<stop offset="100%" stop-color="rgba(124, 110, 232, 0)"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Tooltip Mock -->
+<div class="absolute top-[5%] right-[2%] bg-surface-container-highest border border-outline-variant px-3 py-2 rounded-lg shadow-lg flex flex-col z-20">
+<span class="font-code text-[11px] text-ground">Today</span>
+<span class="font-headline-h4 text-headline-h4 text-signal">84 <span class="text-caption text-on-surface-variant font-normal">pts</span></span>
+</div>
+</div>
+<!-- X-Axis Labels -->
+<div class="ml-12 mt-unit-sm flex justify-between font-code text-[11px] text-ground">
+<span>Day 1</span>
+<span>Day 7</span>
+<span>Day 14</span>
+<span>Day 21</span>
+<span>Day 30</span>
+</div>
+</div>
+</section>
+<!-- Sidebar Area (Spans 4 cols on desktop) -->
+<aside class="col-span-1 md:col-span-4 flex flex-col gap-element-gap">
+<!-- Growth Certificate -->
+<div class="bg-gradient-to-br from-surface-container-highest to-abyss rounded-xl p-unit-md border border-outline-variant/50 relative overflow-hidden group hover:border-signal/50 transition-colors duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-signal opacity-5 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2 group-hover:opacity-10 transition-opacity"></div>
+<div class="flex items-start justify-between mb-unit-lg">
+<h3 class="font-headline-h4 text-headline-h4 text-clarity flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-pulse" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                                Certificate
+                            </h3>
+<span class="bg-pulse/10 text-pulse font-code text-[10px] px-2 py-1 rounded border border-pulse/20">VERIFIED</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-md">
+                            Achieved <strong class="text-clarity">Level 3 Cognitive Autonomy</strong> by sustaining a Clarity Score above 80 for 14 consecutive days.
+                        </p>
+<button class="w-full bg-transparent border border-outline-variant text-on-surface font-label-sm text-label-sm py-2 rounded-full hover:bg-surface-bright transition-colors flex items-center justify-center gap-unit-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="download">download</span>
+                            Export Ledger
+                        </button>
+</div>
+<!-- Origin Map Overlay Preview -->
+<div class="bg-abyss rounded-xl border border-outline-variant/30 flex flex-col overflow-hidden h-full">
+<div class="p-unit-md border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-highest/50">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Origin Map Shift</h3>
+<span class="material-symbols-outlined text-ground text-[18px]" data-icon="compare">compare</span>
+</div>
+<!-- Visual representation of Before/After -->
+<div class="relative flex-grow p-unit-md flex items-center justify-center min-h-[200px] bg-[#1a1a1a]">
+<!-- Abstract Map Nodes Before -->
+<div class="absolute inset-0 flex items-center justify-center opacity-30 blur-[1px]">
+<div class="w-16 h-16 rounded-full border-2 border-alert absolute -ml-12 -mt-8 flex items-center justify-center"><span class="w-2 h-2 bg-alert rounded-full"></span></div>
+<div class="w-20 h-20 rounded-full border border-alert/50 absolute ml-16 mt-12 flex items-center justify-center"><span class="w-1 h-1 bg-alert rounded-full"></span></div>
+<path class="absolute" d="M40,40 L120,80" stroke="#E2484A" stroke-width="1"></path>
+</div>
+<!-- Abstract Map Nodes After (Current) -->
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<div class="w-12 h-12 rounded-full border-2 border-signal absolute flex items-center justify-center bg-signal/10 shadow-[0_0_15px_rgba(124,110,232,0.2)]"><span class="w-3 h-3 bg-signal rounded-full"></span></div>
+<div class="w-10 h-10 rounded-full border border-tertiary absolute ml-24 -mt-10 flex items-center justify-center"><span class="w-2 h-2 bg-tertiary rounded-full"></span></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none">
+<line stroke="#68dbae" stroke-dasharray="2,2" stroke-width="1.5" x1="50%" x2="70%" y1="50%" y2="40%"></line>
+</svg>
+</div>
+<div class="absolute bottom-unit-md left-unit-md right-unit-md flex justify-between items-center z-20">
+<span class="bg-surface/80 backdrop-blur text-alert font-code text-[10px] px-2 py-1 rounded border border-alert/20">Before (Dense Biases)</span>
+<span class="bg-surface/80 backdrop-blur text-signal font-code text-[10px] px-2 py-1 rounded border border-signal/20">Now (Clear Paths)</span>
+</div>
+</div>
+<div class="p-unit-sm bg-surface-container-highest/50 text-center">
+<a class="font-label-sm text-label-sm text-pulse hover:text-signal transition-colors text-[12px]" href="#">View Full Interactive Map →</a>
+</div>
+</div>
+</aside>
+</div>
+<!-- Detailed Breakdown (Bento style row) -->
+<section class="px-padding-mobile md:px-padding-desktop grid grid-cols-1 md:grid-cols-3 gap-element-gap relative z-10">
+<!-- Stat Card 1 -->
+<div class="bg-abyss rounded-xl p-unit-md border border-outline-variant/30 flex flex-col gap-unit-md growth-zone">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-growth text-[20px]" data-icon="psychology">psychology</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Cognitive Flexibility</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="font-headline-h2 text-headline-h2 text-clarity">92%</span>
+<span class="font-code text-[12px] text-growth">+5% this week</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-2">
+<div class="bg-growth h-full rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-abyss rounded-xl p-unit-md border border-outline-variant/30 flex flex-col gap-unit-md">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-pulse text-[20px]" data-icon="filter_alt_off">filter_alt_off</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Bias Detection Rate</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="font-headline-h2 text-headline-h2 text-clarity">78%</span>
+<span class="font-code text-[12px] text-ground">Stable</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-2">
+<div class="bg-pulse h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-abyss rounded-xl p-unit-md border border-outline-variant/30 flex flex-col gap-unit-md relative overflow-hidden">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]" data-icon="history_edu">history_edu</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Audits Completed</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="font-headline-h2 text-headline-h2 text-clarity">14</span>
+<span class="font-code text-[12px] text-ground">In last 30 days</span>
+</div>
+<!-- Mini visual -->
+<div class="flex gap-1 mt-2 h-1.5 w-full">
+<div class="flex-1 bg-tertiary rounded-full opacity-100"></div>
+<div class="flex-1 bg-tertiary rounded-full opacity-80"></div>
+<div class="flex-1 bg-tertiary rounded-full opacity-60"></div>
+<div class="flex-1 bg-tertiary rounded-full opacity-40"></div>
+<div class="flex-1 bg-tertiary rounded-full opacity-20"></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-section-gap bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1000px] mx-auto px-padding-desktop py-unit-lg transition-all duration-300">
+<!-- Brand -->
+<div class="font-headline-h4 text-headline-h4 text-on-surface mb-unit-md md:mb-0">
+                Claros
+            </div>
+<!-- Links -->
+<div class="flex gap-element-gap">
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">About</a>
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">Tech Stack</a>
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">Documentation</a>
+</div>
+<!-- Copyright -->
+<div class="font-caption text-caption text-ground mt-unit-md md:mt-0">
+                © 2024 Claros. See through the noise. Think for yourself.
+            </div>
+</div>
+</footer>
+</body></html>

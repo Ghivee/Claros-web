@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claros - Belief Audit Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "secondary-container": "#53456a",
+                        "on-primary-fixed-variant": "#4230ab",
+                        "alert": "#E2484A",
+                        "on-surface": "#e5e2e1",
+                        "pulse": "#AF9EC9",
+                        "primary-container": "#8e80fb",
+                        "primary-fixed-dim": "#c7bfff",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#170065",
+                        "caution": "#EF9F27",
+                        "primary": "#c7bfff",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#928f9f",
+                        "secondary-fixed-dim": "#d1bfeb",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#86f8c9",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#474553",
+                        "on-primary-container": "#24008c",
+                        "on-secondary-container": "#c6b4e0",
+                        "surface": "#131313",
+                        "secondary": "#d1bfeb",
+                        "surface-variant": "#353534",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#2b0e95",
+                        "surface-tint": "#c7bfff",
+                        "primary-fixed": "#e4dfff",
+                        "surface-container-low": "#1c1b1b",
+                        "growth": "#1D9E75",
+                        "on-secondary-fixed-variant": "#4e4065",
+                        "on-secondary-fixed": "#211537",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-tertiary": "#003827",
+                        "abyss": "#2C2C2A",
+                        "on-surface-variant": "#c8c4d5",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#ecdcff",
+                        "on-tertiary-fixed": "#002115",
+                        "tertiary": "#68dbae",
+                        "tertiary-fixed-dim": "#68dbae",
+                        "ground": "#888780",
+                        "on-secondary": "#372a4d",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#5b4bc4",
+                        "clarity": "#F3F1FF",
+                        "on-tertiary-container": "#003121",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#26a37a",
+                        "signal": "#7C6EE8",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "padding-mobile": "24px",
+                        "container-max": "1000px",
+                        "unit-sm": "8px",
+                        "unit-lg": "32px",
+                        "section-gap": "48px",
+                        "unit-xs": "4px",
+                        "gutter": "20px",
+                        "element-gap": "24px",
+                        "unit-md": "16px",
+                        "padding-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-h1": ["Inter"],
+                        "headline-h2": ["Inter"],
+                        "headline-h3": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-h1-mobile": ["Inter"],
+                        "headline-h4": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "code": ["monospace"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-h1": ["64px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h2": ["28px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "caption": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-h1-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h4": ["19px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "code": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            color: #e5e2e1;
+        }
+        .main-container-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .bg-gradient-signal-dark {
+            background: linear-gradient(135deg, #7C6EE8 0%, #4230ab 100%);
+        }
+        .bg-abyss {
+            background-color: #2C2C2A;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-[#121212] text-on-surface antialiased selection:bg-signal selection:text-white">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-surface dark:bg-surface border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center max-w-[1000px] mx-auto px-padding-mobile md:px-padding-desktop h-20">
+<div class="font-display-h1 text-headline-h2 font-extrabold text-signal tracking-tight cursor-pointer">
+                Claros
+            </div>
+<div class="hidden md:flex items-center space-x-element-gap">
+<a class="text-signal font-bold border-b-2 border-signal pb-1 cursor-pointer active:scale-95 transition-transform" href="#">BeliefAudit</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200 cursor-pointer active:scale-95 transition-transform" href="#">Origin Map</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200 cursor-pointer active:scale-95 transition-transform" href="#">Critical Thinking Gym</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200 cursor-pointer active:scale-95 transition-transform" href="#">Clarity Score</a>
+</div>
+<div class="flex items-center space-x-unit-md font-label-sm text-label-sm">
+<button class="hidden md:block px-4 py-2 border border-outline-variant rounded-full text-on-surface hover:border-signal hover:text-signal transition-all duration-200">Log In</button>
+<button class="px-6 py-2 bg-gradient-signal-dark rounded-full text-white font-medium hover:opacity-90 active:scale-95 transition-all duration-200">Start Audit</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Container -->
+<main class="max-w-[1000px] mx-auto bg-surface-dim main-container-shadow min-h-screen pt-section-gap pb-section-gap px-padding-mobile md:px-padding-desktop relative overflow-hidden">
+<!-- Ambient Background Glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-signal opacity-5 blur-[150px] rounded-full pointer-events-none"></div>
+<!-- Hero Section -->
+<section class="relative z-10 flex flex-col items-center justify-center text-center mt-section-gap mb-32">
+<div class="inline-flex items-center px-3 py-1 rounded-full border border-outline-variant bg-surface-container-high text-pulse font-label-sm text-label-sm mb-element-gap">
+<span class="material-symbols-outlined text-[16px] mr-2">psychiatry</span>
+                Cognitive Sovereignty Platform
+            </div>
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-clarity mb-unit-lg max-w-[800px] leading-tight">
+                You think you formed your own opinions.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[600px] mb-section-gap">
+<strong class="text-signal font-semibold">52%</strong> of what you believe today — you didn't actually choose. Trace your cognitive biases, uncover hidden linguistic layers, and reclaim your mental independence.
+            </p>
+<button class="px-8 py-4 bg-gradient-signal-dark rounded-full text-white font-headline-h4 text-headline-h4 hover:shadow-[0_0_20px_rgba(124,110,232,0.4)] active:scale-95 transition-all duration-300 flex items-center group">
+                Start your belief audit
+                <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</section>
+<!-- Feature Bento Grid (Meanings & Layers) -->
+<section class="mb-32">
+<div class="flex items-center justify-between mb-element-gap border-b border-outline-variant pb-unit-sm">
+<h2 class="font-headline-h3 text-headline-h3 text-clarity">Linguistic Deconstruction</h2>
+<span class="font-label-sm text-label-sm text-ground uppercase tracking-wider">Analysis Engine</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Latin Card -->
+<div class="bg-abyss p-gutter rounded-xl border border-surface-container-highest hover:bg-[#3a3a38] transition-colors duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-bright rounded-full opacity-10 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center mb-unit-md text-pulse">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity mb-unit-xs">Latin Origins</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-unit-md">Trace the etymological roots of your core concepts to understand their foundational, literal meanings before societal distortion.</p>
+<div class="inline-flex px-2 py-1 bg-surface rounded-full text-signal font-code text-code text-[12px] border border-outline-variant">
+                        Root Extraction
+                    </div>
+</div>
+<!-- Spanish Card -->
+<div class="bg-abyss p-gutter rounded-xl border border-surface-container-highest hover:bg-[#3a3a38] transition-colors duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-bright rounded-full opacity-10 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center mb-unit-md text-pulse">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity mb-unit-xs">Cultural Context (Spanish)</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-unit-md">Analyze how meaning shifts across linguistic borders. Compare semantic weight in Spanish to uncover anglo-centric biases.</p>
+<div class="inline-flex px-2 py-1 bg-surface rounded-full text-signal font-code text-code text-[12px] border border-outline-variant">
+                        Cross-Lingual Map
+                    </div>
+</div>
+<!-- Hidden Layer Card -->
+<div class="bg-abyss p-gutter rounded-xl border border-surface-container-highest hover:bg-[#3a3a38] transition-colors duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-bright rounded-full opacity-10 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center mb-unit-md text-pulse">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity mb-unit-xs">The Hidden Layer</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-unit-md">Expose the unspoken assumptions and implicit connotations embedded in the vocabulary you use to define your worldview.</p>
+<div class="inline-flex px-2 py-1 bg-surface rounded-full text-signal font-code text-code text-[12px] border border-outline-variant">
+                        Subtext Scanner
+                    </div>
+</div>
+<!-- Contrast Card -->
+<div class="bg-abyss p-gutter rounded-xl border border-surface-container-highest hover:bg-[#3a3a38] transition-colors duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-bright rounded-full opacity-10 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center mb-unit-md text-pulse">
+<span class="material-symbols-outlined">contrast</span>
+</div>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity mb-unit-xs">Contrast Meanings</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-unit-md">Force perspective shifts by generating exact antithetical frameworks to your current beliefs, testing their structural integrity.</p>
+<div class="inline-flex px-2 py-1 bg-surface rounded-full text-signal font-code text-code text-[12px] border border-outline-variant">
+                        Dialectic Engine
+                    </div>
+</div>
+</div>
+</section>
+<!-- CLAROS Acronym / Phases Section -->
+<section class="mb-section-gap relative">
+<div class="text-center mb-element-gap">
+<h2 class="font-headline-h2 text-headline-h2 text-clarity mb-unit-xs">The C.L.A.R.O.S. Methodology</h2>
+<p class="font-body-md text-body-md text-ground">A structured descent into your own cognitive architecture.</p>
+</div>
+<div class="flex flex-col space-y-unit-sm">
+<!-- C -->
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border border-outline-variant border-opacity-50">
+<div class="font-display-h1 text-display-h1 text-signal opacity-30 mr-element-gap leading-none w-16 text-center">C</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Catalog</h4>
+<p class="font-caption text-caption text-on-surface-variant">Inventory your unexamined axioms and assumed truths without judgment.</p>
+</div>
+</div>
+<!-- L & A (grouped for layout variety) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-sm">
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border border-outline-variant border-opacity-50">
+<div class="font-display-h1 text-display-h1 text-pulse opacity-30 mr-element-gap leading-none w-16 text-center">L</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Localize</h4>
+<p class="font-caption text-caption text-on-surface-variant">Trace exactly where and when you inherited these concepts.</p>
+</div>
+</div>
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border border-outline-variant border-opacity-50">
+<div class="font-display-h1 text-display-h1 text-pulse opacity-30 mr-element-gap leading-none w-16 text-center">A</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Analyze</h4>
+<p class="font-caption text-caption text-on-surface-variant">Deconstruct the linguistic and cultural weight of the beliefs.</p>
+</div>
+</div>
+</div>
+<!-- R -->
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border-l-4 border-signal bg-opacity-80">
+<div class="font-display-h1 text-display-h1 text-signal opacity-80 mr-element-gap leading-none w-16 text-center">R</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Reconstruct</h4>
+<p class="font-caption text-caption text-on-surface-variant">The inflection point. Rebuild your framework using only verified, chosen concepts.</p>
+<div class="mt-2 inline-flex items-center text-[12px] font-label-sm text-pulse uppercase tracking-wide">
+<span class="w-2 h-2 rounded-full bg-pulse mr-2 animate-pulse"></span> Active Phase
+                        </div>
+</div>
+</div>
+<!-- O & S -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-sm">
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border border-outline-variant border-opacity-50">
+<div class="font-display-h1 text-display-h1 text-ground opacity-20 mr-element-gap leading-none w-16 text-center">O</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Optimize</h4>
+<p class="font-caption text-caption text-on-surface-variant">Refine the new mental models for clarity and practical utility.</p>
+</div>
+</div>
+<div class="flex items-start p-unit-md bg-abyss rounded-lg border border-outline-variant border-opacity-50">
+<div class="font-display-h1 text-display-h1 text-ground opacity-20 mr-element-gap leading-none w-16 text-center">S</div>
+<div>
+<h4 class="font-headline-h4 text-headline-h4 text-clarity mb-1">Synthesize</h4>
+<p class="font-caption text-caption text-on-surface-variant">Integrate the audited belief system into daily cognitive habits.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant flat no shadows transition-all duration-300">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1000px] mx-auto px-padding-mobile md:px-padding-desktop py-unit-lg">
+<div class="font-headline-h4 text-headline-h4 text-on-surface mb-unit-md md:mb-0">
+                Claros
+            </div>
+<div class="flex space-x-unit-lg mb-unit-md md:mb-0 font-caption text-caption">
+<a class="text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">About</a>
+<a class="text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">Tech Stack</a>
+<a class="text-ground hover:text-pulse underline decoration-pulse transition-colors" href="#">Documentation</a>
+</div>
+<div class="font-caption text-caption text-ground">
+                © 2024 Claros. See through the noise. Think for yourself.
+            </div>
+</div>
+</footer>
+</body></html>
