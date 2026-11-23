@@ -1,4 +1,4 @@
-// AI Processing Engine (Simulating Claude API interactions)
+// Local scoring routine. Its output follows the shape of a future POST /api/analyze response.
 
 /**
  * Generates personal insight and recommendations based on audit answers

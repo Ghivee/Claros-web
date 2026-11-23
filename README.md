@@ -1,16 +1,42 @@
-# React + Vite
+# Claros
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser app for examining where your beliefs come from and training how you argue. Claros runs entirely in the browser: it scores your answers, shows the result on a dashboard and keeps your history in `localStorage`.
 
-Currently, two official plugins are available:
+[Bahasa Indonesia](README.id.md)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Modules
 
-## React Compiler
+| Route | Module | Purpose |
+| --- | --- | --- |
+| `/` | Dashboard | Overview, including a short note on where the name Claros comes from |
+| `/audit` | Belief Audit | Record a belief and audit it |
+| `/gym` | Critical Gym | Steel-manning challenges and a scenario simulator for cognitive biases |
+| `/map` | Origin Map | Plots the source of each belief against your confidence in it |
+| `/score` | Clarity Score | Tracks how your belief map shifts over time |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The analysis in `src/services/aiService.js` is a local scoring routine written to match a future `POST /api/analyze` response. Nothing is sent to a server.
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React, Vite, React Router, Recharts, Tailwind CSS. Deployed on Vercel (`vercel.json`).
+
+## Getting started
+
+```bash
+npm install
+npm run dev        # development server
+npm run build      # production build into dist/
+npm run lint
+```
+
+## Project structure
+
+```
+src/pages        one file per module
+src/components   shared UI
+src/context      app state
+src/services     scoring (aiService.js) and storage (dbService.js)
+prototype/       the earlier static HTML version of the four modules
+```
+
+`prototype/` comes from the former Verity repository, merged here with its history.
