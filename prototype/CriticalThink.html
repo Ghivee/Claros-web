@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Critical Thinking Gym | Claros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "secondary-container": "#53456a",
+                        "on-primary-fixed-variant": "#4230ab",
+                        "alert": "#E2484A",
+                        "on-surface": "#e5e2e1",
+                        "pulse": "#AF9EC9",
+                        "primary-container": "#8e80fb",
+                        "primary-fixed-dim": "#c7bfff",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#170065",
+                        "caution": "#EF9F27",
+                        "primary": "#c7bfff",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#928f9f",
+                        "secondary-fixed-dim": "#d1bfeb",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#86f8c9",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#474553",
+                        "on-primary-container": "#24008c",
+                        "on-secondary-container": "#c6b4e0",
+                        "surface": "#131313",
+                        "secondary": "#d1bfeb",
+                        "surface-variant": "#353534",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#2b0e95",
+                        "surface-tint": "#c7bfff",
+                        "primary-fixed": "#e4dfff",
+                        "surface-container-low": "#1c1b1b",
+                        "growth": "#1D9E75",
+                        "on-secondary-fixed-variant": "#4e4065",
+                        "on-secondary-fixed": "#211537",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-tertiary": "#003827",
+                        "abyss": "#2C2C2A",
+                        "on-surface-variant": "#c8c4d5",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#ecdcff",
+                        "on-tertiary-fixed": "#002115",
+                        "tertiary": "#68dbae",
+                        "tertiary-fixed-dim": "#68dbae",
+                        "ground": "#888780",
+                        "on-secondary": "#372a4d",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#5b4bc4",
+                        "clarity": "#F3F1FF",
+                        "on-tertiary-container": "#003121",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#26a37a",
+                        "signal": "#7C6EE8",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "padding-mobile": "24px",
+                        "container-max": "1000px",
+                        "unit-sm": "8px",
+                        "unit-lg": "32px",
+                        "section-gap": "48px",
+                        "unit-xs": "4px",
+                        "gutter": "20px",
+                        "element-gap": "24px",
+                        "unit-md": "16px",
+                        "padding-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-h1": ["Inter", "sans-serif"],
+                        "headline-h2": ["Inter", "sans-serif"],
+                        "headline-h3": ["Inter", "sans-serif"],
+                        "caption": ["Inter", "sans-serif"],
+                        "display-h1-mobile": ["Inter", "sans-serif"],
+                        "headline-h4": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "code": ["monospace"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-h1": ["64px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h2": ["28px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "caption": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-h1-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-h4": ["19px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "code": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant w-full top-0 sticky z-50">
+<div class="flex justify-between items-center max-w-[1000px] mx-auto px-padding-desktop h-20">
+<!-- Brand -->
+<div class="font-display-h1 text-headline-h2 font-extrabold text-signal tracking-tight cursor-pointer hover:text-pulse transition-colors duration-200 active:scale-95 transition-transform">
+                Claros
+            </div>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-element-gap items-center font-label-sm text-label-sm">
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">BeliefAudit</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">Origin Map</a>
+<a class="text-signal font-bold border-b-2 border-signal pb-1 cursor-default pointer-events-none" href="#">Critical Thinking Gym</a>
+<a class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200" href="#">Clarity Score</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-unit-md font-label-sm text-label-sm">
+<button class="text-on-surface-variant font-medium hover:text-pulse transition-colors duration-200 cursor-pointer active:scale-95 transition-transform">Log In</button>
+<button class="bg-gradient-to-r from-signal to-on-primary-fixed text-clarity px-6 py-2 rounded-full hover:brightness-110 transition-all duration-200 cursor-pointer active:scale-95 border border-transparent">Start Audit</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow max-w-container-max mx-auto px-padding-mobile md:px-padding-desktop py-section-gap w-full" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+<!-- Dashboard Header / Stats Bento -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-section-gap">
+<!-- Hero Status Card -->
+<div class="md:col-span-2 bg-abyss rounded-xl p-[20px] relative overflow-hidden flex flex-col justify-between min-h-[200px] border border-outline-variant/30">
+<div class="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent z-0 pointer-events-none" data-alt="Abstract digital representation of a focused mind, featuring sharp geometric lines converging in a dark abyss setting. The lighting is moody with subtle purple and deep indigo gradients creating a sense of depth and concentration. The overall aesthetic is minimalist, sleek, and highly technical, resembling a futuristic cognitive interface.">
+</div>
+<div class="relative z-10 flex justify-between items-start">
+<div>
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1 rounded-full mb-unit-md">
+<span class="material-symbols-outlined text-signal" style="font-size: 16px;">fitness_center</span>
+<span class="font-label-sm text-label-sm text-signal">Analyze + Rewire Phase</span>
+</div>
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-clarity mb-unit-xs">Cognitive Conditioning</h1>
+<p class="font-body-lg text-body-lg text-ground">Current Focus: Overcoming Confirmation Bias</p>
+</div>
+</div>
+<div class="relative z-10 mt-auto pt-unit-lg flex items-end justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-ground uppercase tracking-widest mb-1">Current Level</p>
+<p class="font-headline-h2 text-headline-h2 text-clarity">Level 8: Synthesis</p>
+</div>
+<button class="bg-surface text-signal border border-outline-variant px-4 py-2 rounded-full font-label-sm text-label-sm hover:border-signal transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">history</span>
+                        View Logs
+                    </button>
+</div>
+</div>
+<!-- XP Card -->
+<div class="md:col-span-1 bg-abyss rounded-xl p-[20px] border border-outline-variant/30 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pulse to-signal opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-24 h-24 rounded-full border-4 border-surface-container-high flex items-center justify-center mb-unit-md relative">
+<svg class="absolute inset-0 w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-container-high" cx="50" cy="50" fill="none" r="46" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-pulse" cx="50" cy="50" fill="none" r="46" stroke="currentColor" stroke-dasharray="289" stroke-dashoffset="60" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<span class="material-symbols-outlined text-pulse text-4xl" style="font-size: 32px;">bolt</span>
+</div>
+<h3 class="font-headline-h3 text-headline-h3 text-clarity mb-1">4,250 XP</h3>
+<p class="font-caption text-caption text-ground">Total Mental Reps</p>
+<div class="mt-unit-md w-full px-4 pt-4 border-t border-outline-variant/30">
+<div class="flex justify-between font-caption text-caption text-ground mb-2">
+<span>Rank: Novice</span>
+<span>Next: 5k</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-pulse h-1.5 rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workout Regimen Levels -->
+<section>
+<div class="flex items-center gap-unit-md mb-element-gap">
+<h2 class="font-headline-h2 text-headline-h2 text-clarity">Today's Regimen</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-label-sm text-label-sm text-ground">3 Exercises</span>
+</div>
+<div class="space-y-unit-md">
+<!-- Level 1: Expose (Completed) -->
+<div class="bg-abyss rounded-xl p-[20px] border border-outline-variant/30 hover:border-outline transition-colors duration-300 flex flex-col md:flex-row gap-element-gap items-start md:items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-growth border border-growth/30">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-pulse uppercase tracking-widest">Level 1</span>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity">Expose: Steel-manning</h3>
+</div>
+<p class="font-body-md text-body-md text-ground mb-unit-md md:mb-0">Construct the strongest possible argument for a view you diametrically oppose without introducing logical fallacies.</p>
+<!-- Progress -->
+<div class="mt-unit-sm md:hidden w-full">
+<div class="flex justify-between font-caption text-caption text-ground mb-1">
+<span>Completion</span>
+<span>100%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-pulse h-1.5 rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-48 flex-shrink-0">
+<div class="flex justify-between font-caption text-caption text-ground mb-1">
+<span>Status</span>
+<span class="text-growth">Mastered</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-growth h-1.5 rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<button class="w-full md:w-auto mt-unit-md md:mt-0 bg-surface text-clarity border border-outline-variant px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-surface-bright transition-colors text-center cursor-pointer">
+                        Review
+                    </button>
+</div>
+<!-- Level 2: Simulate (Active) -->
+<div class="bg-abyss rounded-xl p-[20px] border-l-4 border-signal shadow-[0_4px_20px_rgba(124,110,232,0.1)] flex flex-col md:flex-row gap-element-gap items-start md:items-center relative">
+<div class="absolute top-0 right-0 p-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-signal"></span>
+</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-signal border border-signal/30">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-signal uppercase tracking-widest">Level 2</span>
+<h3 class="font-headline-h4 text-headline-h4 text-clarity">Simulate: Scenario Feedback</h3>
+</div>
+<p class="font-body-md text-body-md text-ground mb-unit-md md:mb-0">Navigate a high-stakes dialogue tree against an adversarial AI designed to exploit emotional reasoning.</p>
+<!-- Progress -->
+<div class="mt-unit-sm w-full md:hidden">
+<div class="flex justify-between font-caption text-caption text-ground mb-1">
+<span>In Progress</span>
+<span>45%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-pulse h-1.5 rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-48 flex-shrink-0">
+<div class="flex justify-between font-caption text-caption text-ground mb-1">
+<span>In Progress</span>
+<span class="text-pulse">45%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-pulse h-1.5 rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<button class="w-full md:w-auto mt-unit-md md:mt-0 bg-gradient-to-r from-signal to-on-primary-fixed text-clarity px-6 py-2 rounded-full font-label-sm text-label-sm hover:brightness-110 transition-all text-center flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-signal/20">
+<span class="material-symbols-outlined" style="font-size: 18px; font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Resume
+                    </button>
+</div>
+<!-- Level 3: Discuss (Locked) -->
+<div class="bg-abyss/50 rounded-xl p-[20px] border border-outline-variant/10 flex flex-col md:flex-row gap-element-gap items-start md:items-center grayscale opacity-70">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-outline border border-outline-variant/30">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Level 3</span>
+<h3 class="font-headline-h4 text-headline-h4 text-outline">Discuss: Structured Debate</h3>
+</div>
+<p class="font-body-md text-body-md text-ground/70 mb-unit-md md:mb-0">Engage in a structured peer-to-peer debate with neutral moderation. Requires completion of Level 2.</p>
+<!-- Progress -->
+<div class="mt-unit-sm w-full md:hidden">
+<div class="flex justify-between font-caption text-caption text-ground/50 mb-1">
+<span>Locked</span>
+<span>0%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-surface-container-highest h-1.5 rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-48 flex-shrink-0">
+<div class="flex justify-between font-caption text-caption text-ground/50 mb-1">
+<span>Locked</span>
+<span>0%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-surface-container-highest h-1.5 rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+<button class="w-full md:w-auto mt-unit-md md:mt-0 bg-surface-container-lowest text-outline border border-outline-variant/30 px-6 py-2 rounded-full font-label-sm text-label-sm cursor-not-allowed text-center flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">lock</span>
+                        Locked
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-section-gap py-unit-lg">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1000px] mx-auto px-padding-desktop">
+<div class="font-headline-h4 text-headline-h4 text-on-surface mb-unit-md md:mb-0">
+                Claros
+            </div>
+<nav class="flex gap-element-gap items-center mb-unit-md md:mb-0">
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-all duration-300" href="#">About</a>
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-all duration-300" href="#">Tech Stack</a>
+<a class="font-caption text-caption text-ground hover:text-pulse underline decoration-pulse transition-all duration-300" href="#">Documentation</a>
+</nav>
+<div class="font-caption text-caption text-ground">
+                © 2024 Claros. See through the noise. Think for yourself.
+            </div>
+</div>
+</footer>
+</body></html>
